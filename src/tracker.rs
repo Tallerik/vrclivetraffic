@@ -31,7 +31,7 @@ impl Tracker {
     pub fn new(radar_loc: &Bounds, floor: i32, ceiling: i32) -> Self {
         let providers = Providers::new(vec![
             Box::new(FlightRadar::new(radar_loc)),
-            Box::new(AdsbExchange::new(radar_loc)),
+            //Box::new(AdsbExchange::new(radar_loc)),
         ]);
 
         Self {

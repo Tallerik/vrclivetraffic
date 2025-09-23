@@ -49,8 +49,8 @@ fn build_aircraft_string(data: &mut TrackData, should_interpolate: bool) -> Stri
         "@N:{callsign}:{squawk}:1:{lat}:{lon}:{alt}:{speed}:{pbh}:0\r\n",
         callsign = ac_data.callsign,
         squawk = ac_data.squawk,
-        lat = pos.lat,
-        lon = pos.lon,
+        lat = ac_data.latitude,
+        lon = ac_data.longitude,
         alt = ac_data.altitude,
         speed = ac_data.ground_speed,
         pbh = pbh

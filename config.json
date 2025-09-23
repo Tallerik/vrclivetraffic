@@ -1,8 +1,8 @@
 {
-  "airport": "KBOS",
-  "range": 30,
+  "airport": "EDDS",
+  "range": 1,
   "delay": 6,
   "floor": 0,
   "ceiling": 99999,
-  "use_flightaware": true
+  "use_flightaware": false
 }

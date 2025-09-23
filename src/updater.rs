@@ -3,7 +3,7 @@ use serde_json::Value;
 use std::env;
 
 const PROGRAM_RELEASE_URL: &str =
-    "https://api.github.com/repos/sequal32/vrclivetraffic/releases/latest";
+    "https://api.github.com/repos/Tallerik/vrclivetraffic/releases/latest";
 
 const USER_AGENT: &str =
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0";

@@ -1,8 +1,8 @@
 [package]
 name = "livetraffic"
 description = "Observe real world traffic in your favorite radar client!"
-version = "1.4.2"
-authors = ["Sequal32"]
+version = "1.4.4"
+authors = ["Sequal32", "Tallerik"]
 edition = "2018"
 repository = "https://github.com/sequal/vrclivetraffic"
 

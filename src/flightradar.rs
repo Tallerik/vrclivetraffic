@@ -36,7 +36,7 @@ impl AircraftProvider for FlightRadar {
             let data: Value = serde_json::from_value(value.clone()).unwrap();
 
             let aircraft = AircraftData {
-                squawk: data["squawk"].to_string(),
+                squawk: data["squawk"].to_string().replace(" ", "").replace("\"", ""),
                 callsign: data["flight"].to_string().replace(" ", "").replace("\"", ""),
                 is_on_ground: data["alt_baro"] == "ground",
                 latitude: data["lat"].as_f64().unwrap_or(0.0) as f32,
@@ -45,8 +45,8 @@ impl AircraftProvider for FlightRadar {
                 ground_speed: data["gs"].as_f64().unwrap_or(0.0) as u32,
                 timestamp: 0,
                 altitude: if (data["alt_baro"] != "ground") {data["alt_baro"].as_f64().unwrap_or(0.0) as i32} else {0},
-                model: data["t"].to_string(),
-                hex: data["hex"].to_string(),
+                model: data["t"].to_string().replace(" ", "").replace("\"", ""),
+                hex: data["hex"].to_string().replace(" ", "").replace("\"", ""),
                 origin: "ZZZZ".to_string(),
                 destination: "ZZZZ".to_string(),
             };
